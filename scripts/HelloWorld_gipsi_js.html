@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<!-- JSExAlertWrite.html -->
-
-<!-- I am learning JavaScript and this helpful snippet came from a tutorial https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/JavaScript_Introduction.html -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>JavaScript Example: Functions alert() and document.write()</title>
-  <script>
-    alert("Hello, world!");
-  </script>
 </head>
 <body>
-  <h1>My first JavaScript says:</h1>
+  <h1>My First JavaScript Example</h1>
+
+  <!-- JavaScript Alert -->
+  <button onclick="showAlert()">Click me for an Alert</button>
+
+  <!-- JavaScript document.write() -->
+  <h2>Greeting:</h2>
+  <p id="greeting"></p>
+
+  <h2>Last Modified:</h2>
+  <p id="lastModified"></p>
+
   <script>
-    document.write("<h2><em>Hello world, again!</em></h2>");
-    document.write("<p>This document was last modified on "
-        + document.lastModified + ".</p>");
+    // Function to show an alert when the button is clicked
+    function showAlert() {
+      alert("Hello, world!");
+    }
+
+    // JavaScript document.write() to display a greeting message and last modified date
+    var greetingElement = document.getElementById("greeting");
+    var lastModifiedElement = document.getElementById("lastModified");
+
+    greetingElement.innerHTML = "<em>Hello, world, again!</em>";
+    lastModifiedElement.innerHTML = "This document was last modified on " + document.lastModified + ".";
   </script>
 </body>
 </html>
